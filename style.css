@@ -52,7 +52,13 @@
     font-weight: 800;
   }
   
- 
+  #button-form {
+
+    white-space: wrap; /* Impede a quebra de texto em várias linhas */
+    overflow: hidden; /* Oculta qualquer texto que exceda a largura máxima */
+    text-overflow: ellipsis; /* Adiciona reticências (...) se o texto for cortado */
+  }
+  
   
   .group {
     position: relative;
