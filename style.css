@@ -194,3 +194,49 @@
 #button-form {
   animation: pulse 2s infinite;
 }
+
+
+.carousel img {
+width: 100%;
+
+}
+
+
+.clientes-section {
+  background-color: #f4f4f4; /* Cor de fundo cinza claro */
+  padding: 20px;
+  text-align: center;
+}
+
+.clientes-logos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.clientes-logos img {
+  width: 100px; /* Tamanho igual para todos os logotipos */
+  margin: 0 10px; /* Espaçamento horizontal entre logotipos */
+  filter: grayscale(100%); /* Tons de cinza */
+}
+
+#text-clientes{
+  font-weight: 800;
+}
+
+.section-clientes{
+  width: 100%;
+}
+
+.rodape {
+
+  color: #fff; /* Cor do texto, se desejar */
+  text-align: center; /* Alinha o conteúdo ao centro horizontalmente */
+  
+  bottom: 0;
+  margin-top: 100px;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
