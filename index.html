@@ -34,6 +34,24 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 	</script>
 
 
+<!-- Meta Pixel Code -->
+<script>
+	!function(f,b,e,v,n,t,s)
+	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];
+	s.parentNode.insertBefore(t,s)}(window, document,'script',
+	'https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '192570343824561');
+	fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=192570343824561&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- End Meta Pixel Code -->
+
 
 
 
@@ -189,8 +207,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="elementor-element elementor-element-789c5daa elementor-align-center elementor-mobile-align-justify elementor-widget elementor-widget-button" data-id="789c5daa" data-element_type="widget" >
 <div class="elementor-widget-container">
 <div class="elementor-button-wrapper">
-<a class="elementor-button-link elementor-button elementor-size-lg elementor-animation-bob"   href="#formulario">QUERO TIRAR DÚVIDAS GRATUITAMENTE</a>
+	<a id="#formulario">
+
+		<button type="submit" id="button-form" class="elementor-button-link elementor-button elementor-size-lg elementor-animation-bob" onclick="scrollToForm()">RECEBER ASSESSORIA GRATUITA</button>
+
+</a>
 </div>
+
 </div>
 </div>
 </div>
@@ -414,7 +437,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="elementor-element elementor-element-d39cab6 elementor-align-center elementor-mobile-align-justify elementor-widget elementor-widget-button" data-id="d39cab6" data-element_type="widget" data-widget_type="button.default">
 <div class="elementor-widget-container">
 <div class="elementor-button-wrapper">
-	<a class="elementor-button-link elementor-button elementor-size-lg elementor-animation-bob"   href="#formulario">QUERO TIRAR DÚVIDAS GRATUITAMENTE</a>
+	<a id="#formulario">
+
+		<button type="submit" id="button-form" class="elementor-button-link elementor-button elementor-size-lg elementor-animation-bob" onclick="scrollToForm()">RECEBER ASSESSORIA GRATUITA</button>
+
+</a>
 </div>
 </div>
 </div>
@@ -972,7 +999,11 @@ R$2.484,00 </p>
 <div class="elementor-element elementor-element-d39cab6 elementor-align-center elementor-mobile-align-justify elementor-widget elementor-widget-button" data-id="d39cab6" data-element_type="widget" data-widget_type="button.default">
 <div class="elementor-widget-container">
 <div class="elementor-button-wrapper">
-	<a class="elementor-button-link elementor-button elementor-size-lg elementor-animation-bob"   href="#formulario">QUERO TIRAR DÚVIDAS GRATUITAMENTE</a>
+	<a id="#formulario">
+
+		<button type="submit" id="button-form" class="elementor-button-link elementor-button elementor-size-lg elementor-animation-bob" onclick="scrollToForm()">RECEBER ASSESSORIA GRATUITA</button>
+
+</a>
 </div>
 </div>
 </div>
@@ -1226,7 +1257,7 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 		<div class="elementor-element elementor-element-789c5daa elementor-align-center elementor-mobile-align-justify elementor-widget elementor-widget-button" data-id="789c5daa" data-element_type="widget" >
 			<div class="elementor-widget-container">
 			<div class="elementor-button-wrapper">
-				<button type="submit" id="button-form" class="elementor-button-link elementor-button elementor-size-lg elementor-animation-bob" href="#formulario">RECEBER ASSESSORIA GRATUITA</button>
+				<button type="submit" id="button-form" class="elementor-button-link elementor-button elementor-size-lg elementor-animation-bob" href="#formulario">ENVIAR FORMULÁRIO</button>
 
 			</div>
 			</div>
@@ -1238,7 +1269,17 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 </div>
 
 
-
+<script>
+	function scrollToForm() {
+		const formulario = document.getElementById("formulario");
+	
+		// Verifique se o elemento com o ID "formulario" existe na página
+		if (formulario) {
+			formulario.scrollIntoView({ behavior: "smooth" });
+		}
+	}
+	</script>
+	
 
 
 
