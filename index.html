@@ -1327,37 +1327,35 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 
   
 
-<div  class="formulario">
-	<!--  TRABALHANDO A SEÇÃO FORMÚLARIO-->
-	<div id="formulario" class="form">
-		<span class="title">FORMULÁRIO PARA CONTATO</span>
-		<form id="contact-form" class="form" action="https://formspree.io/f/mjvdweoa" method="POST">
-		<div class="group">
-			<input  id="input-nome" name="Names" placeholder="‎" type="text" required="required">
-		<label for="name">Nome</label>
+	<div class="formulario">
+		<!-- TRABALHANDO A SEÇÃO FORMULÁRIO -->
+		<div id="formulario" class="form">
+		  <span class="title">FORMULÁRIO PARA CONTATO</span>
+		  <form id="contact-form" class="form" action="https://formspree.io/f/mjvdweoa" method="POST" onsubmit="redirecionarParaAgradecimento()">
+			<div class="group">
+			  <input id="input-nome" name="Names" placeholder="‎" type="text" required="required">
+			  <label for="name">Nome</label>
+			</div>
+			<div class="group">
+			  <input id="input-email" name="Email" placeholder="‎" type="email" required="required">
+			  <label for "email">Digite seu melhor E-mail</label>
+			</div>
+			<div class="group">
+			  <input id="input-telefone" name "Telefone" placeholder="‎" required="required" type="phone">
+			  <label for="phone">Celular</label>
+			</div>
+			<div class="group">
+			  <div class="elementor-element elementor-element-789c5daa elementor-align-center elementor-mobile-align-justify elementor-widget elementor-widget-button" data-id="789c5daa" data-element_type="widget">
+				<div class="elementor-widget-container">
+				  <div class="elementor-button-wrapper">
+					<button type="submit" id="button-form" class="elementor-button-link elementor-button elementor-size-lg elementor-animation-bob" href="#formulario">ENVIAR FORMULÁRIO</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </form>
 		</div>
-	<div class="group">
-		<input id="input-email" name="Email" placeholder="‎" type="email" required="required">
-		<label for="email">Digite seu melhor E-mail</label>
-		</div>
-		<div class="group">
-			<input id="input-telefone" name="Telefone" placeholder="‎" required="required" type="phone">
-			<label for="phone">Celular</label>
-			</div>
-	<div class="group">
-		<div class="elementor-element elementor-element-789c5daa elementor-align-center elementor-mobile-align-justify elementor-widget elementor-widget-button" data-id="789c5daa" data-element_type="widget" >
-			<div class="elementor-widget-container">
-			<div class="elementor-button-wrapper">
-				<button type="submit" id="button-form" class="elementor-button-link elementor-button elementor-size-lg elementor-animation-bob" href="#formulario">ENVIAR FORMULÁRIO</button>
-
-			</div>
-			</div>
-			</div>
-
-		</form>
-
-
-</div>
+	  </div>
 
 
 
@@ -1414,6 +1412,33 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 	  </script>
 	  
 
+
+
+
+
+	  <script>
+		document.getElementById("contact-form").addEventListener("submit", function(event) {
+		  event.preventDefault(); // Impede o envio padrão do formulário
+	  
+		  // Faça uma solicitação POST para o Formspree para enviar o formulário
+		  fetch('https://formspree.io/f/mjvdweoa', {
+			method: 'POST',
+			body: new FormData(this) // Envia os dados do formulário
+		  })
+		  .then(response => response.json())
+		  .then(data => {
+			// Verifica se o envio foi bem-sucedido (você pode personalizar essa verificação)
+			if (data.success) {
+			  // Redireciona para a página de agradecimento após um breve atraso
+			  setTimeout(function() {
+				window.location.href = 'https://paginadeobrigadorevidency.netlify.app/';
+			  }, 2000); // Redireciona após 2 segundos
+			}
+		  });
+		});
+	  </script>
+	  
+	  
 
 </body>
 </html>
